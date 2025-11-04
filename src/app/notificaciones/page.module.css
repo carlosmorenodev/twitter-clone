@@ -1,0 +1,30 @@
+.notificationContainer {
+  min-height: 100vh;
+  
+  color: white;
+}
+
+.notificationHeader {
+    padding: 20px;
+    font-size: 1.5rem;
+    border-left: solid 1px #2c2c2c;
+    border-right: solid 1px #2c2c2c;
+}
+
+
+
+.notification {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: solid 1px #2c2c2c;
+    padding: 15px;
+}
+
+.notificationAvatar {
+  width: 50px;
+  & img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}

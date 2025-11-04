@@ -1,0 +1,27 @@
+.followingContainer {
+  min-height: 100vh;
+}
+
+.followingTitle {
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-left: solid 1px #2c2c2c;
+  border-right: solid 1px #2c2c2c;
+  color: white;
+}
+
+.userGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  border: solid 1px #2c2c2c;
+}
+
+/* @media (min-width: 768px) {
+  .userGrid {
+    justify-content: center;
+  }
+} */
