@@ -10,9 +10,10 @@ const Footer = () => {
         gap: '10px',
         padding: '20px'
     }
-
+    
     const FooterLinksStyles = {
-       display: 'flex',
+        display: 'flex',
+        flexWrap: 'wrap',
        gap: '10px'
     }
 

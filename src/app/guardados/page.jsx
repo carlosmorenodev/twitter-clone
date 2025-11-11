@@ -36,7 +36,15 @@ const guardadosPage = () => {
                   </div>
                   <p className={styles.tweetContent}>{tweet.content}</p>
                   {tweet.image && (
-                    <Image src={tweet.image} alt="alt" width={600} height={400} />
+                    <div className={styles.imageContainer}>
+                      <Image
+                        src={tweet.image}
+                        fill={true}
+                        alt="alt"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+
                   )}
 
                 </div>
@@ -70,7 +78,7 @@ const guardadosPage = () => {
             </div>
           ))
         }
-      </div>
+      </div >
 
     </>
   )
