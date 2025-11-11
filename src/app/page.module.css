@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;  
+  min-width: 0;
 }
 
 .tweetAvatar {
@@ -20,6 +21,13 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.tweetText {
+   margin: 5px 0 10px 0;
+    /* Asegura que las palabras largas se rompan y envuelvan correctamente */
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
 }
 
 .name {
@@ -33,7 +41,11 @@
 
 .tweetActions {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+
+  
 }
 
 .tweetAction {
@@ -44,6 +56,24 @@
     font-size: 13px;
     margin-left: 5px;
   }
+}
+
+.imageContainer {
+  /* 1. Posición relativa para anclar la imagen 'fill' */
+  position: relative;
+  /* 2. Ancho completo del contenedor padre */
+  width: 100%;
+  /* 3. El truco del padding para mantener la proporción (ejemplo: 16:9) */
+  /* padding-bottom: (9 / 16) * 100% = 56.25% */
+  padding-bottom: 56.25%; 
+  margin-top: 10px;
+  border-radius: 12px;
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se salga */
+}
+
+.tweetImage {
+  /* 'object-fit: cover' asegura que la imagen cubra todo el contenedor sin distorsionarse, recortando si es necesario. */
+  object-fit: cover; 
 }
 
 .icon:hover {

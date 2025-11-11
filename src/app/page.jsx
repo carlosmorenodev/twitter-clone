@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <>
-    <CreateTweet onPostTweet={handlePostTweet} />
+      <CreateTweet onPostTweet={handlePostTweet} />
       {
         tweets.map((tweet) => (
 
@@ -55,9 +55,19 @@ export default function Home() {
                   <span className={styles.name}>{tweet.user}</span>
                   <span className={styles.username}>{tweet.username}</span>
                 </div>
-                <p className={styles.tweetContent}>{tweet.content}</p>
+                <p className={styles.tweetText}>{tweet.content}</p>
                 {tweet.image && (
-                  <Image src={tweet.image} alt="alt" width={600} height={400} />
+                  <div className={styles.imageContainer}>
+                    <Image
+                      src={tweet.image}
+                      alt="Contenido multimedia del tweet"
+                      fill={true}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      /* width={600}
+                      height={400} */
+                      className={styles.tweetImage}
+                    />
+                  </div>
                 )}
 
               </div>

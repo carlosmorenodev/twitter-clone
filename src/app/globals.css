@@ -8,8 +8,11 @@
 }
 
 .app-layout {
-  background-color: #151515;
+  background-color: #151515; 
+  
 }
+
+
 
 /* Contenido princial */
 
@@ -18,6 +21,7 @@
   margin: auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  
 }
 
 .sidebar {
@@ -54,6 +58,11 @@
 
 .user-avatar-container {
   padding-top: 0.5rem;
+ 
+}
+
+.user-avatar {
+  border-radius: 50%;
 }
 
 .create-tweet-textarea {
@@ -122,9 +131,18 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .main-content-area {
     width: 100%;
+    justify-content: center;
+   
+    
+    display: flex;  
+    flex-direction: column; 
+  }
+
+  .sidebar {
+    position: static;
   }
 }
 
